@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/api/
+    destination: /api
 hooks:
   AfterInstall:
-    - location: scripts/npm-install.sh
+    - location: /api/scripts/npm-install.sh
       runas: ubuntu
       timeout: 300
   ApplicationStart:
-    - location: scripts/npm-start.sh
+    - location: /api/scripts/npm-start.sh
       runas: ubuntu
       timeout: 60
