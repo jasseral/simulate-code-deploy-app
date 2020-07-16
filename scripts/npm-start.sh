@@ -1,2 +1,3 @@
 #!/bin/bash
-nodejs index.js
+#nodejs index.js
+echo puto2
