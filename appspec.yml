@@ -2,13 +2,15 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /api
+    destination: /var/api/
 hooks:
   AfterInstall:
-    - location: /api/npm-install.sh
-      runas: ec2-user
+    - location: scripts/npm-install.sh
+      runas: root
       timeout: 300
   ApplicationStart:
-    - location: /api/npm-start.sh
-      runas: ec2-user
+    - location: scripts/npm-start.sh
+      runas: root
       timeout: 60
+
+      
