@@ -5,10 +5,10 @@ files:
     destination: /api
 hooks:
   AfterInstall:
-    - location: npm-install.sh
+    - location: /api/npm-install.sh
       runas: ec2-user
       timeout: 300
   ApplicationStart:
-    - location: npm-start.sh
+    - location: /api/npm-start.sh
       runas: ec2-user
       timeout: 60
