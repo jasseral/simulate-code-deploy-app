@@ -1,2 +1,2 @@
 #!/bin/bash
-#nodejs index.js
+nodejs index.js
