@@ -6,8 +6,10 @@ files:
 hooks:
   AfterInstall:
     - location: Scripts/npm-install.sh
+      runas: root
       timeout: 300
   ApplicationStart:
     - location: Scripts/npm-start.sh
+      runas: root
       timeout: 60
 
